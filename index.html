@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Consulta del cliente</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Formulario de consulta</h1>
+
+    <form action="recibido.html" method="GET">
+      <fieldset>
+        <legend>Datos personales</legend>
+
+      <label for="nombre">Nombre:</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Escribe tu nombre"
+      />
+
+      <label for="apellido">Apellido <span>(*)</span>:</label>
+      <input
+        type="text"
+        id="apellido"
+        name="apellido"
+        required
+        placeholder="Escribe tu apellido"
+      />
+      <label for="edad">Edad:</label>
+      <input
+        type="number"
+        id="edad"
+        name="edad"
+        min="18"
+        max="120"
+        placeholder="Entre 18 y 120"
+      />
+
+      <label for="email">Email <span>(*)</span>:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="Escribe tu email"
+      />
+
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" />
+
+      <label for="asunto">Asunto <span>(*)</span>:</label>
+      <input
+        type="text"
+        id="asunto"
+        name="asunto"
+        required
+        placeholder="Escribe el asunto"
+      />
+
+      <label for="coche">Coche:</label>
+      <select name="coche" id="coche">
+        <option value="">Selecciona un coche</option>
+        <option value="coche1">Opel Corsa</option>
+        <option value="coche2">Volkswagen Golf</option>
+        <option value="coche3">Ford Fiesta</option>
+        <option value="coche4">Toyota Corolla</option>
+      </select>
+
+      <p>¿Deseas recibir información sobre nuestras ofertas?</p>
+      <div class="ofertas">
+        <input type="radio" id="si" name="ofertas" value="si" />
+        <label for="si">Sí</label>
+        <input type="radio" id="no" name="ofertas" value="no" />
+        <label for="no">No</label>
+      </div>
+
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+      <label for="vehicle1"> I have a bike</label><br />
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+      <label for="vehicle2"> I have a car</label><br />
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+      <label for="vehicle3"> I have a boat</label>
+
+      <label for="comentario">Comentario:</label>
+      <textarea
+        id="comentario"
+        name="comentario"
+        maxlength="150"
+        placeholder="Escribe tu mensaje"
+      ></textarea>
+      <p><small>(*) Campos obligatorios</small></p>
+      <div class="botones">
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+      </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
